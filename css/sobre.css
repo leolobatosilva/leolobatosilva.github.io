@@ -1,0 +1,418 @@
+/* Sobre Page Styles */
+
+/* Page Banner */
+.page-banner {
+    padding: 100px 0 50px;
+    background-color: var(--primary-color);
+    background-image: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: var(--white);
+    text-align: center;
+    margin-top: var(--header-height);
+}
+
+.banner-content h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--white);
+}
+
+.breadcrumb {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.breadcrumb li {
+    display: inline-block;
+    font-size: 16px;
+}
+
+.breadcrumb li:not(:last-child):after {
+    content: '/';
+    margin-left: 10px;
+}
+
+.breadcrumb li a {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.breadcrumb li a:hover {
+    color: var(--white);
+}
+
+/* Our Story Section */
+.our-story-section {
+    padding: var(--section-spacing) 0;
+}
+
+.story-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.story-image {
+    flex: 1;
+}
+
+.story-image img {
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+}
+
+.story-text {
+    flex: 1;
+}
+
+.story-text h2 {
+    font-size: 36px;
+    margin-bottom: 25px;
+    color: var(--secondary-color);
+    position: relative;
+}
+
+.story-text h2:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.story-text p {
+    font-size: 16px;
+    color: var(--text-light);
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+/* Mission, Vision, Values Section */
+.mvv-section {
+    padding: var(--section-spacing) 0;
+    background-color: var(--bg-light);
+}
+
+.mvv-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.mvv-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius-md);
+    padding: 40px 30px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-fast);
+    text-align: center;
+    height: 100%;
+}
+
+.mvv-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-md);
+}
+
+.mvv-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    background-color: rgba(0, 102, 204, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mvv-icon i {
+    font-size: 36px;
+    color: var(--primary-color);
+}
+
+.mvv-card h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+.mvv-card p {
+    font-size: 16px;
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+.mvv-card ul {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.mvv-card ul li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    color: var(--text-light);
+}
+
+.mvv-card ul li i {
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+/* Team Section */
+.team-section {
+    padding: var(--section-spacing) 0;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
+
+.team-member {
+    display: flex;
+    gap: 30px;
+    background-color: var(--white);
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-fast);
+}
+
+.team-member:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.member-photo {
+    width: 200px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-normal);
+}
+
+.team-member:hover .member-photo img {
+    transform: scale(1.1);
+}
+
+.member-info {
+    flex: 1;
+    padding: 25px 25px 25px 0;
+}
+
+.member-info h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+    color: var(--secondary-color);
+}
+
+.member-role {
+    display: block;
+    font-size: 16px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.member-info p {
+    font-size: 15px;
+    color: var(--text-light);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.member-social {
+    display: flex;
+    gap: 10px;
+}
+
+.member-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(0, 102, 204, 0.1);
+    color: var(--primary-color);
+    border-radius: 50%;
+    transition: var(--transition-fast);
+}
+
+.member-social a:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* Why Choose Us Section */
+.why-choose-us-section {
+    padding: var(--section-spacing) 0;
+    background-color: var(--bg-light);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.benefit-item {
+    background-color: var(--white);
+    border-radius: var(--border-radius-md);
+    padding: 30px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-fast);
+    text-align: center;
+}
+
+.benefit-item:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-md);
+}
+
+.benefit-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    background-color: rgba(0, 102, 204, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.benefit-icon i {
+    font-size: 32px;
+    color: var(--primary-color);
+}
+
+.benefit-item h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.benefit-item p {
+    font-size: 15px;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* Certifications Section */
+.certifications-section {
+    padding: var(--section-spacing) 0;
+}
+
+.certification-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.certification-text {
+    flex: 1;
+}
+
+.certification-text p {
+    font-size: 16px;
+    color: var(--text-light);
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.certification-logos {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.cert-logo {
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 120px;
+}
+
+.cert-logo img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .story-content,
+    .certification-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .story-text,
+    .certification-text {
+        text-align: center;
+    }
+    
+    .story-text h2:after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .mvv-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .team-member {
+        flex-direction: column;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .member-photo {
+        width: 100%;
+        height: 300px;
+    }
+    
+    .member-info {
+        padding: 25px;
+        text-align: center;
+    }
+    
+    .member-social {
+        justify-content: center;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-content h1 {
+        font-size: 32px;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .certification-logos {
+        flex-direction: column;
+        align-items: center;
+    }
+}

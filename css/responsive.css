@@ -1,0 +1,234 @@
+/* Responsive Styles */
+
+/* Large Devices (Desktops) */
+@media (max-width: 1200px) {
+    :root {
+        --container-width: 960px;
+        --section-spacing: 80px;
+    }
+    
+    .hero-text h1 {
+        font-size: 40px;
+    }
+    
+    .services-grid,
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .partners-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+}
+
+/* Medium Devices (Tablets) */
+@media (max-width: 992px) {
+    :root {
+        --container-width: 720px;
+        --section-spacing: 70px;
+        --header-height: 70px;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: var(--header-height);
+        left: -100%;
+        width: 300px;
+        height: calc(100vh - var(--header-height));
+        background-color: var(--white);
+        box-shadow: var(--shadow-md);
+        transition: var(--transition-fast);
+        z-index: 99;
+        padding: 30px;
+        overflow-y: auto;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .menu-item {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 15px;
+    }
+    
+    .menu-item a {
+        padding: 10px 0;
+        display: block;
+        width: 100%;
+    }
+    
+    .menu-item a:after {
+        display: none;
+    }
+    
+    .hero-content {
+        flex-direction: column;
+    }
+    
+    .hero-text {
+        text-align: center;
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .hero-image {
+        text-align: center;
+    }
+    
+    .hero-image img {
+        margin: 0 auto;
+    }
+    
+    .about-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .about-text {
+        text-align: center;
+    }
+    
+    .about-stats {
+        justify-content: center;
+    }
+    
+    .testimonials-slider {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Small Devices (Landscape Phones) */
+@media (max-width: 768px) {
+    :root {
+        --container-width: 540px;
+        --section-spacing: 60px;
+    }
+    
+    .section-header h2 {
+        font-size: 30px;
+    }
+    
+    .hero-text h1 {
+        font-size: 32px;
+    }
+    
+    .services-grid,
+    .features-grid,
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .partners-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .footer-policy-links a {
+        margin: 0 10px;
+    }
+    
+    .footer-contact p {
+        justify-content: center;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+    
+    .newsletter {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+/* Extra Small Devices (Portrait Phones) */
+@media (max-width: 576px) {
+    :root {
+        --section-spacing: 50px;
+    }
+    
+    .header-contact {
+        display: none;
+    }
+    
+    .hero {
+        padding-top: calc(var(--header-height) + 30px);
+    }
+    
+    .hero-text h1 {
+        font-size: 28px;
+    }
+    
+    .hero-text p {
+        font-size: 16px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+    }
+    
+    .section-header h2 {
+        font-size: 26px;
+    }
+    
+    .section-header p {
+        font-size: 16px;
+    }
+    
+    .about-stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .partners-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-content h2 {
+        font-size: 26px;
+    }
+    
+    .cta-content p {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,222 @@
+/* Estilos para o Pop-up de Captura de Leads */
+.lead-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    overflow: auto;
+}
+.lead-popup-content {
+    position: relative;
+    background-color: #fff;
+    width: 90%;
+    max-width: 900px;
+    margin: 50px auto;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    animation: popupFadeIn 0.5s ease;
+}
+@keyframes popupFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.close-popup {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+.close-popup:hover {
+    transform: rotate(90deg);
+}
+.popup-container {
+    display: flex;
+    flex-direction: row;
+}
+.popup-text {
+    flex: 1;
+    padding: 40px;
+    background-color: #0066cc;
+    color: #fff;
+}
+.popup-text h2 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    line-height: 1.1;
+}
+.popup-text p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+.popup-image {
+    flex: 1;
+    position: relative;
+    background-color: #ecf5ff;
+    overflow: hidden;
+}
+.popup-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.logo-overlay {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.logo-overlay img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+.lead-form {
+    margin-top: 30px;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+.lead-form input {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 16px;
+}
+.lead-form input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+.lead-form input:focus {
+    outline: none;
+    border-color: #fff;
+}
+.lead-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 15px;
+    background-color: #25d366; /* WhatsApp Green */
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+.lead-btn:hover {
+    background-color: #128C7E; /* Darker WhatsApp Green */
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.lead-btn .whatsapp-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+.success-message {
+    text-align: center;
+    padding: 20px 0;
+}
+.success-message i {
+    font-size: 50px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+/* Responsividade Aprimorada */
+@media (max-width: 768px) {
+    .lead-popup-content {
+        width: 95%;
+        margin: 20px auto;
+    }
+    
+    .popup-container {
+        flex-direction: column;
+    }
+    
+    .popup-text {
+        padding: 30px 20px;
+    }
+    
+    .popup-text h2 {
+        font-size: 32px;
+    }
+    
+    .popup-text p {
+        font-size: 16px;
+    }
+    
+    .popup-image {
+        max-height: 200px;
+    }
+    
+    .form-group input {
+        padding: 12px;
+        font-size: 14px;
+    }
+    
+    .lead-btn {
+        padding: 12px;
+        font-size: 14px;
+    }
+    
+    .lead-btn .whatsapp-icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+    }
+}
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 480px) {
+    .lead-popup-content {
+        margin: 10px auto;
+        width: 98%;
+    }
+    
+    .popup-text {
+        padding: 20px 15px;
+    }
+    
+    .popup-text h2 {
+        font-size: 28px;
+    }
+    
+    .popup-text p {
+        font-size: 14px;
+    }
+}
