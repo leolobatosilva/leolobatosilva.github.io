@@ -163,13 +163,14 @@
         width: 95%;
         margin: 20px auto;
     }
-    
+
     .popup-container {
         flex-direction: column;
     }
-    
+
     .popup-text {
-        padding: 30px 20px;
+        flex: 1;
+        width: 100%;
     }
     
     .popup-text h2 {
@@ -179,9 +180,9 @@
     .popup-text p {
         font-size: 16px;
     }
-    
+
     .popup-image {
-        max-height: 200px;
+        display: none; /* This will completely hide the image section on mobile */
     }
     
     .form-group input {
